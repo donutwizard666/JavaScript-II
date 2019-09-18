@@ -1,9 +1,10 @@
+
 // Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
-/* 
 
+/*
   // GIVEN THIS PROBLEM:
 
   function firstItem(arr, cb) {
@@ -40,25 +41,46 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 
 function getLength(arr, cb) {
+  return cb(arr.length);
   // getLength passes the length of the array into the callback.
 }
+const test1 = getLength(items, callback => `Array length is ${callback}!`);
+  console.log(test1); // "I love my Pencil!"
+
 
 function last(arr, cb) {
+  return cb(arr[arr.length - 1]);
   // last passes the last item of the array into the callback.
 }
+const test2 = last(items, callback => `The last item is ${callback}`);
+console.log(test2);
 
 function sumNums(x, y, cb) {
+    return cb(x + y);
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
+const test3 = sumNums(400, 50, callback => `This passes the result to ${callback}`);
+console.log(test3);
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb(x * y);
 }
+const test4 = multiplyNums(4, 4, callback => `The answer is ${callback}`);
+console.log(test4);
 
-function contains(item, list, cb) {
+function contains(checkThis, ArrayWeAreChecking, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  if (ArrayWeAreChecking.includes (checkThis)) {
+    return cb(true);
+  }
+  else {
+    return cb(false);
+  }
 }
+const test5 = contains ('Gum', items, callback => `The answer is ${callback}`);
+console.log(test5);
 
 /* STRETCH PROBLEM */
 

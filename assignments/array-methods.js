@@ -1,3 +1,4 @@
+
 // A local community center is holding a fund raising 5k fun run and has invited 50 small businesses to make a small donation on their behalf for some much needed updates to their facilities.  Each business has assigned a representative to attend the event along with a small donation.
 
 // Scroll to the bottom of the list to use some advanced array methods to help the event director gather some information from the businesses.
@@ -58,6 +59,11 @@ const runners = [
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs. Combine both the first and last names and populate a new array called `fullNames`. This array will contain just strings.
 let fullNames = [];
+
+runners.forEach(function(i){
+ return fullNames.push(`${i.first_name} ${i.last_name}`);
+});
+
 console.log(fullNames);
 
 // ==== Challenge 2: Use .map() ====
