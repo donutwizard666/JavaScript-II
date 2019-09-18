@@ -1,9 +1,17 @@
+
 // ==== Challenge 1: Write your own closure ====
 // Write a closure of your own creation.
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+
+var myName = 'Ryan'; //if this goes inside the function I do not have access to it
+function returnThis () {
+  return returnThis;
+}
+console.log(myName);
+returnThis();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
