@@ -6,13 +6,12 @@
 // The outer scope can be a parent function, or the top level of the script.
 
 
-function thisFunctionIsGreat () {
-  const name = 'Ryan';
-  return name;
-  
+var myName = 'Ryan'; //if this goes inside the function I do not have access to it
+function returnThis () {
+  return returnThis;
 }
-
-console.log(name);
+console.log(myName);
+returnThis();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
